@@ -17,8 +17,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="XM5-1n-98s" kind="relationship" relationship="viewControllers" id="dSh-ag-Uyz"/>
                         <segue destination="vVx-Id-Tdj" kind="relationship" relationship="viewControllers" id="eyH-M8-NMb"/>
+                        <segue destination="XM5-1n-98s" kind="relationship" relationship="viewControllers" id="dSh-ag-Uyz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LT9-Js-Jgn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -43,7 +43,7 @@
             </objects>
             <point key="canvasLocation" x="954" y="388"/>
         </scene>
-        <!--Meme Collection View Controller-->
+        <!--Collection View Style-->
         <scene sceneID="FMf-nt-9CQ">
             <objects>
                 <collectionViewController id="q5j-x4-bfb" customClass="MemeCollectionViewController" customModule="MemeMe2_0" sceneMemberID="viewController">
@@ -93,7 +93,7 @@
                             <outlet property="delegate" destination="q5j-x4-bfb" id="Mai-na-Yoc"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="Wyw-ip-i8j"/>
+                    <navigationItem key="navigationItem" title="Collection View Style" id="Yg0-Aq-S3D"/>
                     <connections>
                         <outlet property="flowLayout" destination="0CX-gg-grn" id="sHK-IZ-k5m"/>
                     </connections>
@@ -102,7 +102,7 @@
             </objects>
             <point key="canvasLocation" x="1884" y="388"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Table View Style-->
         <scene sceneID="lcg-tA-l9B">
             <objects>
                 <tableViewController id="EBE-PP-25i" customClass="MemeTableViewController" customModule="MemeMe2_0" sceneMemberID="viewController">
@@ -147,7 +147,7 @@
                             <outlet property="delegate" destination="EBE-PP-25i" id="Gqo-SW-plD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="1NI-mO-wK9"/>
+                    <navigationItem key="navigationItem" title="Table View Style" id="3Fe-Kc-BO2"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SCH-L1-V5f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

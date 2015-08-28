@@ -19,7 +19,7 @@ class MemeTableViewController: UITableViewController, UITableViewDataSource, UIT
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -48,7 +48,7 @@ class MemeTableViewController: UITableViewController, UITableViewDataSource, UIT
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let editorVC = storyboard?.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController
         
-        editorVC.imagePickerView.image = self.memes[indexPath.row].originalImage
+        editorVC.imagePickerView.image = memes[indexPath.row].originalImage
         editorVC.topText.text = memes[indexPath.row].topText
         editorVC.botText.text = memes[indexPath.row].botText
         

@@ -24,6 +24,9 @@ class MemeCollectionViewController: UICollectionViewController, UICollectionView
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+//        self.navigationItem.rightBarButtonItem = self.
+        
         // Register cell classes
         self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
