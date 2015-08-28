@@ -24,6 +24,11 @@ class MemeTableViewController: UITableViewController, UITableViewDataSource, UIT
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        // Jump to editorView if there is no Meme already.
+        if memes == nil {
+            let editorVC = storyboard?.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController
+            navigationController!.pushViewController(editorVC, animated: true)
+        }
         
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as! AppDelegate
