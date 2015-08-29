@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../MemeMe2.0/ImageViewController.swift">
+   </FileRef>
+   <FileRef
       location = "self:MemeMe2.0.xcodeproj">
    </FileRef>
 </Workspace>

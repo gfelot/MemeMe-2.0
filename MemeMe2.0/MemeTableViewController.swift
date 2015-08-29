@@ -9,7 +9,7 @@
 import UIKit
 
 class MemeTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     var memes: [Meme]!
     
     override func viewDidLoad() {
@@ -26,13 +26,18 @@ class MemeTableViewController: UITableViewController, UITableViewDataSource, UIT
         super.viewWillAppear(animated)
         // Jump to editorView if there is no Meme already.
         if memes == nil {
-            let editorVC = storyboard?.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController
-            navigationController!.pushViewController(editorVC, animated: true)
+            performSegueWithIdentifier("isEmpty", sender: nil)
         }
-        
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as! AppDelegate
         memes = appDelegate.memes
+        self.tableView!.reloadData()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "isEmpty") {
+            let editorVC = segue.destinationViewController as! MemeEditorViewController
+        }
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,13 +56,45 @@ class MemeTableViewController: UITableViewController, UITableViewDataSource, UIT
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let editorVC = storyboard?.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController
-        
-        editorVC.imagePickerView.image = memes[indexPath.row].originalImage
-        editorVC.topText.text = memes[indexPath.row].topText
-        editorVC.botText.text = memes[indexPath.row].botText
+        let editorVC = storyboard?.instantiateViewControllerWithIdentifier("ImageViewController") as! ImageViewController
+        println(memes[indexPath.row].topText)
+        editorVC.meme = memes[indexPath.row]
         
         navigationController!.pushViewController(editorVC, animated: true)
     }
    
+    @IBAction func addMeme(sender: AnyObject) {
+        performSegueWithIdentifier("isEmpty", sender: nil)
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

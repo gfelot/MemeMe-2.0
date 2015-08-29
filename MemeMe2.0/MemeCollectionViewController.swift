@@ -47,17 +47,6 @@ class MemeCollectionViewController: UICollectionViewController, UICollectionView
         memes = appDelegate.memes
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: UICollectionViewDataSource
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         //#warning Incomplete method implementation -- Return the number of sections
@@ -77,4 +66,41 @@ class MemeCollectionViewController: UICollectionViewController, UICollectionView
     
         return cell
     }
+    
+    @IBAction func addMeme(sender: AnyObject) {
+        performSegueWithIdentifier("addMemeFromCollection", sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "addMemeFromCollection") {
+            let editorVC: MemeEditorViewController = segue.destinationViewController as! MemeEditorViewController
+        }
+    }
+    
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

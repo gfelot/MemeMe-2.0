@@ -24,11 +24,10 @@ class MemeEditorViewController: UIViewController, UITextFieldDelegate, UIImagePi
     @IBOutlet weak var folderButton: UIBarButtonItem!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     
-    
     /* System func */
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setTextAttribut(botText, str : " BOTTOM ")
         setTextAttribut(topText, str: " TOP ")
     }
@@ -191,4 +190,19 @@ class MemeEditorViewController: UIViewController, UITextFieldDelegate, UIImagePi
         
         presentViewController(activityViewController, animated: true, completion: nil)
     }
+    
+    @IBAction func cancelAction(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
+
+
+
+
+
+
+
+
+
+
+

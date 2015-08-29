@@ -12,20 +12,24 @@
 	<dict>
 		<key>9795FB898AD0BFA0E9AE8C2DBFE1208FEB49D5D3</key>
 		<string>git.epitech.eu:/felot_g/Swift</string>
+		<key>F05F77A466AC79A8A13FA616A2458D1DFA26834C</key>
+		<string>github.com:RagnarLodbrok/MemeMe-2.0.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MemeMe2.0/MemeMe2.0.xcodeproj/project.xcworkspace</string>
+	<string>MemeMe2.0.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9795FB898AD0BFA0E9AE8C2DBFE1208FEB49D5D3</key>
 		<string>../../..</string>
+		<key>F05F77A466AC79A8A13FA616A2458D1DFA26834C</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>git.epitech.eu:/felot_g/Swift</string>
+	<string>github.com:RagnarLodbrok/MemeMe-2.0.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>9795FB898AD0BFA0E9AE8C2DBFE1208FEB49D5D3</string>
+	<string>F05F77A466AC79A8A13FA616A2458D1DFA26834C</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -34,7 +38,15 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>9795FB898AD0BFA0E9AE8C2DBFE1208FEB49D5D3</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Swift</string>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F05F77A466AC79A8A13FA616A2458D1DFA26834C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MemeMe2.0</string>
 		</dict>
 	</array>
 </dict>
