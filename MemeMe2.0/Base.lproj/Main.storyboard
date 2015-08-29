@@ -66,7 +66,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vi7-vo-DHF">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="feW-xj-PFo">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                             <animations/>
                                             <variation key="widthClass=compact" fixedFrame="YES">
@@ -80,14 +80,17 @@
                                 <animations/>
                                 <variation key="default">
                                     <mask key="subviews">
-                                        <exclude reference="Vi7-vo-DHF"/>
+                                        <exclude reference="feW-xj-PFo"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="subviews">
-                                        <include reference="Vi7-vo-DHF"/>
+                                        <include reference="feW-xj-PFo"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outlet property="imageMeme" destination="feW-xj-PFo" id="gNB-2f-j7Z"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -371,6 +374,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="imageVC" destination="YoA-yd-ETP" id="ZOV-l4-jeb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gqa-3C-pLo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -400,6 +406,6 @@
         <image name="TabImage" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fwu-03-cq4"/>
+        <segue reference="3WZ-ll-Cib"/>
     </inferredMetricsTieBreakers>
 </document>
