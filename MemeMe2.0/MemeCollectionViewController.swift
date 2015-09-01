@@ -28,7 +28,7 @@ class MemeCollectionViewController: UICollectionViewController, UICollectionView
 //        self.navigationItem.rightBarButtonItem = self.
         
         // Register cell classes
-        collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+//        collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
         let space: CGFloat = 3.0
@@ -50,10 +50,14 @@ class MemeCollectionViewController: UICollectionViewController, UICollectionView
     }
 
 
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return memes.count
     }
+    
+//    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+//        
+//        return memes.count
+//    }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! MemeCollectionViewCell

@@ -336,6 +336,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ho0-Ka-zCq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Bii-5C-tJJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YoA-yd-ETP">
@@ -356,10 +357,10 @@
                                 <exclude reference="YoA-yd-ETP"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="ck8-WT-TJs"/>
                                 <exclude reference="881-0d-h8o"/>
                                 <exclude reference="AVZ-MA-9F1"/>
                                 <exclude reference="n4V-cp-gT1"/>
-                                <exclude reference="ck8-WT-TJs"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -367,10 +368,10 @@
                                 <include reference="YoA-yd-ETP"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="ck8-WT-TJs"/>
                                 <include reference="881-0d-h8o"/>
                                 <include reference="AVZ-MA-9F1"/>
                                 <include reference="n4V-cp-gT1"/>
-                                <include reference="ck8-WT-TJs"/>
                             </mask>
                         </variation>
                     </view>
