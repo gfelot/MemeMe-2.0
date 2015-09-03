@@ -14,12 +14,7 @@ class MemeTableViewController: UITableViewController, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        navigationItem.leftBarButtonItem = self.editButtonItem()
+        navigationItem.leftBarButtonItem = editButtonItem()
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -47,7 +42,7 @@ class MemeTableViewController: UITableViewController, UITableViewDataSource, UIT
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("MemeTableViewCell") as! UITableViewCell
-        let data = self.memes[indexPath.row]
+        let data = memes[indexPath.row]
         
         cell.imageView?.image = data.memedImage
         cell.textLabel?.text = data.topText

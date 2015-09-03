@@ -52,6 +52,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0CX-gg-grn">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -407,6 +408,6 @@
         <image name="TabImage" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3WZ-ll-Cib"/>
+        <segue reference="fwu-03-cq4"/>
     </inferredMetricsTieBreakers>
 </document>
