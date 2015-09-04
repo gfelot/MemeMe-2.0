@@ -19,14 +19,18 @@ class MemeTableViewController: UITableViewController, UITableViewDataSource, UIT
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        // Jump to editorView if there is no Meme already.
-        if memes == nil {
-            performSegueWithIdentifier("isEmpty", sender: nil)
-        }
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as! AppDelegate
         memes = appDelegate.memes
         tableView!.reloadData()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        // Jump to editorView if there is no Meme already.
+        if memes == nil {
+            performSegueWithIdentifier("isEmpty", sender: nil)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -62,34 +66,3 @@ class MemeTableViewController: UITableViewController, UITableViewDataSource, UIT
         performSegueWithIdentifier("isEmpty", sender: nil)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

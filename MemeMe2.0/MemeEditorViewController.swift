@@ -63,12 +63,12 @@ class MemeEditorViewController: UIViewController, UITextFieldDelegate, UIImagePi
     
     func keyboardWillShow(notification: NSNotification) {
         if botText.isFirstResponder() {
-            view.frame.origin.y -= getKeyboardHeight(notification)
+            view.frame.origin.y = -getKeyboardHeight(notification)
         }
     }
     
     func keyboardWillHide(notification: NSNotification) {
-        view.frame.origin.y == 0
+        view.frame.origin.y = 0
     }
     
     // Get KB height to move the User View
@@ -120,6 +120,7 @@ class MemeEditorViewController: UIViewController, UITextFieldDelegate, UIImagePi
     let memeTextAttribues = [
         NSStrokeColorAttributeName : UIColor.blackColor(),
         NSForegroundColorAttributeName : UIColor.whiteColor(),
+//        NSBackgroundColorAttributeName : UIColor.clearColor(),
         NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 38)!,
         NSStrokeWidthAttributeName : NSNumber(float: -3.0)
     ]
@@ -192,17 +193,6 @@ class MemeEditorViewController: UIViewController, UITextFieldDelegate, UIImagePi
     }
     
     @IBAction func cancelAction(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
